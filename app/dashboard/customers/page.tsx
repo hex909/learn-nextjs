@@ -1,7 +1,12 @@
 import { fetchCustomersWithImage } from '@/app/lib/data';
 import { lusitana } from '@/app/ui/fonts';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Customers',
+};
 
 export default async function Page() {
   const data = await fetchCustomersWithImage();
